@@ -105,6 +105,8 @@ public class LoginActivity extends AppCompatActivity {
                 Toast.makeText(LoginActivity.this, result.getMessage(), Toast.LENGTH_SHORT).show();
                 if(result.getCode() == 200) {
                     Intent intent = new Intent(getApplicationContext(), ProtectorActivity.class);
+                    intent.putExtra("email",mEmailView.getText().toString());
+                    intent.putExtra("name",result.getUserName());
                     startActivity(intent);
                     showProgress(false);
                 }
