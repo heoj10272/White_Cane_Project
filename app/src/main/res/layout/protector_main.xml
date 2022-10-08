@@ -10,6 +10,8 @@
         android:layout_height="wrap_content"
         android:text="안녕하세요" />
 
+
+
     <Button
         android:id="@+id/Nowbutton"
         android:layout_width="match_parent"
