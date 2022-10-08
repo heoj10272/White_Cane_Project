@@ -103,8 +103,11 @@ public class LoginActivity extends AppCompatActivity {
             public void onResponse(Call<LoginResponse> call, Response<LoginResponse> response) {
                 LoginResponse result = response.body();
                 Toast.makeText(LoginActivity.this, result.getMessage(), Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(getApplicationContext(), ProtectorActivity.class);
-                startActivity(intent);
+                if(result.getCode() == 200) {
+                    Intent intent = new Intent(getApplicationContext(), ProtectorActivity.class);
+                    startActivity(intent);
+                    showProgress(false);
+                }
                 showProgress(false);
             }
 
