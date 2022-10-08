@@ -13,20 +13,30 @@
         android:theme="@style/Theme.For_impairment_project"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".activity.RegisterPartnerActivity"
+            android:exported="false" />
+        <activity
             android:name=".activity.LoginActivity"
-            android:label="@string/app_name"
-            android:exported="true">
+            android:exported="true"
+            android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.JoinActivity" android:exported="false"/>
-        <activity android:name=".activity.ProtectorActivity" android:exported="false"/>
-        <activity android:name=".activity.ProtectorNowActivity" android:exported="false"/>
-        <activity android:name=".activity.ProtectorPastMoveActivity" android:exported="false"/>
-
+        <activity
+            android:name=".activity.JoinActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.ProtectorActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.ProtectorNowActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.ProtectorPastMoveActivity"
+            android:exported="false" />
     </application>
 
 </manifest>
