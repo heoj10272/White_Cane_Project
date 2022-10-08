@@ -10,7 +10,7 @@ public class RegisterPartnerData {
     @SerializedName("partnerEmail")
     String partnerEmail;
 
-    @SerializedName("usertype")
+    @SerializedName("userType")
     String userType;
 
     public RegisterPartnerData(String userEmail, String partnerEmail, String userType){

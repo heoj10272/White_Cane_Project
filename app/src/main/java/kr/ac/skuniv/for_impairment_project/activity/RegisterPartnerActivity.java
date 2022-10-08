@@ -52,10 +52,10 @@ public class RegisterPartnerActivity extends AppCompatActivity {
         name2 = name;
         email2 = email;
         mTextViewName.setText(name + "님 안녕하세요.");
-        if(userType == "Impairment"){
+        if(userType.equals("Impairment")){
             mTextViewPartner.setText("보호자의 이메일을 입력해주세요.");
         }
-        else{
+        else if (userType.equals("Protector")){
             mTextViewPartner.setText("피보호자의 이메일을 입력해주세요");
         }
 
@@ -90,8 +90,7 @@ public class RegisterPartnerActivity extends AppCompatActivity {
             focusView.requestFocus();
         }
         else {
-
-            startRegisterPartner(new RegisterPartnerData(partnerEmail,mEditText.getText().toString(),userType2));
+            startRegisterPartner(new RegisterPartnerData(email2,mEditText.getText().toString(),userType2));
         }
     }
     private boolean isEmailValid(String email) {
