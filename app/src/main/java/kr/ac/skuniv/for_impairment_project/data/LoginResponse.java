@@ -15,18 +15,21 @@ public class LoginResponse {
     @SerializedName("userName")
     private String userName;
 
-    public int getCode() {
-        return code;
-    }
+    @SerializedName("userType")
+    private String userType;
 
-    public String getMessage() {
-        return message;
-    }
+    @SerializedName("partnerEmail")
+    private String partnerEmail;
 
-    public int getUserNum() {
-        return userNum;
-    }
+    public int getCode() { return code; }
+
+    public String getMessage() { return message; }
+
+    public int getUserNum() { return userNum; }
 
     public String getUserName() { return userName; }
 
+    public String getUserType() { return userType; }
+
+    public String getPartnerEmail() { return partnerEmail; }
 }

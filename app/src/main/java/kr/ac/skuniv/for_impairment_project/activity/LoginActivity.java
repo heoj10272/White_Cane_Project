@@ -103,12 +103,26 @@ public class LoginActivity extends AppCompatActivity {
             public void onResponse(Call<LoginResponse> call, Response<LoginResponse> response) {
                 LoginResponse result = response.body();
                 Toast.makeText(LoginActivity.this, result.getMessage(), Toast.LENGTH_SHORT).show();
-                if(result.getCode() == 200) {
-                    Intent intent = new Intent(getApplicationContext(), ProtectorActivity.class);
-                    intent.putExtra("email",mEmailView.getText().toString());
-                    intent.putExtra("name",result.getUserName());
-                    startActivity(intent);
-                    showProgress(false);
+                if(result.getCode() == 200) { //로그인이 성공적이면
+                    if(result.getPartnerEmail() == null){ //등록된 파트너가 없으면
+                        Intent intent2 = new Intent(getApplicationContext(), RegisterPartnerActivity.class);
+                        intent2.putExtra("email",mEmailView.getText().toString());
+                        intent2.putExtra("name",result.getUserName());
+                        intent2.putExtra("userType",result.getUserType());
+                        startActivity(intent2);
+                        showProgress(false);
+
+                    }
+                    else { //등록된 파트너가 있으면
+                        //보호자로 가는지 피보호자로 가는지 나눠줘야함
+                        Intent intent = new Intent(getApplicationContext(), ProtectorActivity.class);
+                        intent.putExtra("email", mEmailView.getText().toString()); //로그인한 유저의 이메일
+                        intent.putExtra("name", result.getUserName()); //로그인한 유저의 이름
+                        intent.putExtra("userType",result.getUserType()); //로그인한 유저의 타입
+                        intent.putExtra("partnerEmail",result.getPartnerEmail()); //로그인한 유저의 파트너 이메일
+                        startActivity(intent);
+                        showProgress(false);
+                    }
                 }
                 showProgress(false);
             }

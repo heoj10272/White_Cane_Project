@@ -28,7 +28,7 @@ public class ProtectorActivity extends AppCompatActivity {
         String email = intent.getStringExtra("email");
         String name = intent.getStringExtra("name");
 
-        mNametextView.setText("안녕하세요 "+ name);
+        mNametextView.setText("안녕하세요 "+ name + "님!");
 
 
 
