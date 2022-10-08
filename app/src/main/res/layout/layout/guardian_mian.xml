@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="안녕하세요" />
+
+    <Button
+        android:id="@+id/Nowbutton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="실시간 위치 조회" />
+
+    <Button
+        android:id="@+id/Pastbutton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="과거 동선 조회" />
+</LinearLayout>
