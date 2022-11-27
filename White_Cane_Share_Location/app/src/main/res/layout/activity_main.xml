@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:layout_width="293dp"
+        android:layout_height="35dp"
+        android:src="@drawable/logo_3" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="위치 공유"
+        android:gravity="center"
+        android:textSize="40dp"
+        android:layout_marginBottom="20dp"
+        android:textColor="@color/black"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="자신의 위치를 공유하거나"
+        android:gravity="center"
+        android:textSize="15dp"
+        android:layout_marginBottom="5dp"
+        android:textColor="@color/black"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="피보호자의 위치를 조회할 수 있습니다."
+        android:gravity="center"
+        android:textSize="15dp"
+        android:layout_marginBottom="20dp"
+        android:textColor="@color/black"
+        />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/abc"
+        android:text="피보호자 위치 조회"
+        android:id="@+id/btnFinder"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/abc"
+        android:text="보호자에게 위치 정보 공유"
+        android:id="@+id/btnUser"/>
+
+
+
+
+</LinearLayout>

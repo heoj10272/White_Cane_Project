@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@color/white"
+    tools:context=".activity.BluetoothActivity">
+
+    <ImageView
+        android:layout_width="293dp"
+        android:layout_height="35dp"
+        android:src="@drawable/logo_3" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="블루투스 연결"
+        android:gravity="center"
+        android:textSize="40dp"
+        android:textColor="@color/black"
+        android:layout_marginBottom="25dp"
+        />
+    <TextView
+        android:id="@+id/bluename"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ㅁㅁㅁ님 안녕하세요 !"
+        android:textSize="25dp"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:layout_marginBottom="8dp"
+
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="블루투스 장치를 연결해주세요."
+        android:textColor="@color/black"
+        android:gravity="center"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnBluetoothOn"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:visibility="gone"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/abc"
+            android:text="블루투스 ON" />
+
+        <Button
+            android:id="@+id/btnBluetoothOff"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+
+            android:visibility="gone"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/abc"
+            android:text="블루투스 OFF" />
+        />
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/btnConnect"
+        android:layout_width="269dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:background="@drawable/abc"
+        android:text="연결하기" />
+
+
+</LinearLayout>
